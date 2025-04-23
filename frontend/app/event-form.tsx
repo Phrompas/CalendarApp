@@ -124,7 +124,6 @@ export default function EventFormScreen() {
         style={[styles.input, { height: 100, textAlignVertical: 'top' }]}
       />
 
-      {/* เวลาเริ่มต้น */}
       <TouchableOpacity style={styles.pickerButton} onPress={showStartPicker}>
         <Text style={styles.pickerText}>
           {startTime ? `เริ่ม: ${startTime.toLocaleString('th-TH')}` : 'เลือกเวลาเริ่มต้น'}
@@ -138,7 +137,6 @@ export default function EventFormScreen() {
         locale="th-TH"
       />
 
-      {/* เวลาสิ้นสุด */}
       <TouchableOpacity style={styles.pickerButton} onPress={showEndPicker}>
         <Text style={styles.pickerText}>
           {endTime ? `สิ้นสุด: ${endTime.toLocaleString('th-TH')}` : 'เลือกเวลาสิ้นสุด'}
