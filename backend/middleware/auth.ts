@@ -17,7 +17,7 @@ export function verifyToken(req: AuthRequest, res: Response, next: NextFunction)
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET || 'supersecretkey') as { userId: number };
     req.userId = decoded.userId;
-    next(); // สำคัญ! ต้องเรียก next() เพื่อให้ไป middleware ถัดไป
+    next();
   } catch (err) {
     res.status(403).json({ error: 'Invalid token' });
   }
